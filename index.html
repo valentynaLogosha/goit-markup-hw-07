@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="header" class="page-header">
       <div class="container header-container">
         <nav class="header-navigation">
           <a class="header-navigation-logo link" href="./index.html">
@@ -59,73 +59,77 @@
             </li>
           </ul>
         </address>
-        <button type="button" class="menu-hamburger js-open-menu">
-          <svg width="32px" height="32px" fiil="black">
-            <use href="./images/icons.svg#icon-hamburger"></use>
+        <button type="button" class="button-hamburger" data-menu-open>
+          <svg class="hamburger-icon" width="32" height="22">
+            <use href="./images/icons-svg-hw-6.svg#icon-hamburger"></use>
           </svg>
         </button>
       </div>
 
-      <div class="mobile-menu js-menu-container">
-        <div class="mobile-menu-container">
-          <div class="mobile-menu-group">
-            <button type="button" class="modal-close-btn-menu js-close-menu">
-              <svg class="modal-btn-icon" width="8px" height="8px">
-                <use href="./images/icons.svg#icon-Vector-1"></use>
+      <!-- mobile-menu -->
+
+      <div class="mobile-menu" data-menu>
+        <div class="menu-container">
+          <div class="menu-nav">
+            <button type="button" class="menu-btn" data-menu-close>
+              <svg width="8px" height="8px" class="svg-close">
+                <use href="./images/icons-hw-4.svg#icon-hamburger"></use>
               </svg>
             </button>
-
-            <ul class="mobile-menu-navigation">
-              <li class="list">
-                <a href="./index.html" class="link current">Studio</a>
+            <ul class="navigation-list-menu">
+              <li class="navigation-menu">
+                <a class="nav-link-menu current link" href="./index.html"
+                  >Studio</a
+                >
               </li>
-              <li class="list">
-                <a href="./portfolio.html" class="link">Portfolio</a>
+              <li class="navigation-menu">
+                <a class="nav-link-menu link" href="./portfolio.html"
+                  >Portfolio</a
+                >
               </li>
-              <li class="list"><a href="" class="link">Contacts</a></li>
+              <li class="navigation-menu">
+                <a class="nav-link-menu link" href="">Contacts</a>
+              </li>
             </ul>
           </div>
-
-          <div class="mobile-address-social-group">
-            <address class="mobile-address">
-              <ul class="mobile-contact list">
-                <li class="mobile-tel">
-                  <a href="tel:+110001111111" class="link"
-                    >+11 (000) 111-11-11</a
-                  >
-                </li>
-                <li class="mobile-email">
-                  <a href="mailto:info@devstudio.com" class="link"
-                    >info@devstudio.com</a
-                  >
-                </li>
-              </ul>
-            </address>
-            <ul class="social-team-mobile-menu list">
-              <li>
-                <a class="icon-social-team">
-                  <svg height="16px" width="16px">
+          <div class="menu-addres">
+            <ul class="address-menu">
+              <li class="link-phone-menu">
+                <a class="link-phone link" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="link-address-menu">
+                <a class="mail-menu" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="menu-social-list">
+              <li class="menu-item">
+                <a class="menu-soc-link" href="">
+                  <svg class="menu-soc-icons" width="24px" height="24px">
                     <use href="./images/icons.svg#icon-instagram-1"></use>
                   </svg>
                 </a>
               </li>
-              <li>
-                <a class="icon-social-team">
-                  <svg height="16px" width="16px">
+              <li class="menu-item">
+                <a class="menu-soc-link" href="">
+                  <svg class="menu-soc-icons" width="24px" height="24px">
                     <use href="./images/icons.svg#icon-twitter-1"></use>
                   </svg>
                 </a>
               </li>
-              <li>
-                <a class="icon-social-team">
-                  <svg height="16px" width="16px">
+              <li class="menu-item">
+                <a class="menu-soc-link" href="">
+                  <svg class="menu-soc-icons" width="24px" height="24px">
                     <use href="./images/icons.svg#icon-facebook"></use>
                   </svg>
                 </a>
               </li>
-              <li>
-                <a class="icon-social-team">
-                  <svg height="16px" width="16px">
+              <li class="menu-item">
+                <a class="menu-soc-link" href="">
+                  <svg class="menu-soc-icons" width="24px" height="24px">
                     <use href="./images/icons.svg#icon-linkedin-1"></use>
                   </svg>
                 </a>
@@ -659,7 +663,13 @@
       </div>
     </div>
 
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/modal.js"></script>
-    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

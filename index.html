@@ -61,7 +61,7 @@
         </address>
         <button type="button" class="button-hamburger" data-menu-open>
           <svg class="hamburger-icon" width="32" height="22">
-            <use href="./images/icons-svg-hw-6.svg#icon-hamburger"></use>
+            <use href="./images/icons.svg#icon-hamburger"></use>
           </svg>
         </button>
       </div>
@@ -73,7 +73,7 @@
           <div class="menu-nav">
             <button type="button" class="menu-btn" data-menu-close>
               <svg width="8px" height="8px" class="svg-close">
-                <use href="./images/icons-hw-4.svg#icon-hamburger"></use>
+                <use href="./images/icons.svg#icon-Vector-1"></use>
               </svg>
             </button>
             <ul class="navigation-list-menu">
@@ -100,7 +100,7 @@
                 >
               </li>
               <li class="link-address-menu">
-                <a class="mail-menu" href="mailto:info@devstudio.com"
+                <a class="mail-menu link" href="mailto:info@devstudio.com"
                   >info@devstudio.com</a
                 >
               </li>
@@ -206,13 +206,37 @@
           <h2 class="examples-text">What Are We Doing</h2>
           <ul class="examples-text-list list">
             <li class="examples-card">
-              <img src="./images/Rectangle1.jpg" alt="rect" width="360" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/what-doing1-1x.jpg 1x,
+                    ./images/what-doing1-2x.jpg 2x
+                  "
+                />
+                <img src="./images/Rectangle1.jpg" alt="rect" width="360" />
+              </picture>
             </li>
             <li class="examples-card">
-              <img src="./images/Rectangle2.jpg" alt="rect2" width="360" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/what-doing2-1x.jpg 1x,
+                    ./images/what-doing2-2x.jpg 2x
+                  "
+                />
+                <img src="./images/Rectangle2.jpg" alt="rect2" width="360" />
+              </picture>
             </li>
             <li class="examples-card">
-              <img src="./images/Rectangle3.jpg" alt="rect3" width="360" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/what-doing3-1x.jpg 1x,
+                    ./images/what-doing3-2x.jpg 2x
+                  "
+                />
+                <img src="./images/Rectangle3.jpg" alt="rect3" width="360" />
+              </picture>
             </li>
           </ul>
         </div>
@@ -509,7 +533,7 @@
     </main>
     <footer>
       <div class="container footer-container">
-        <div class="footer-element">
+        <div class="footer-element media-footer">
           <a class="logo footer-logo" href="./index.html"
             ><span style="color: #4d5ae5">Web</span>Studio</a
           >
@@ -518,8 +542,8 @@
             digital marketing & growth solutions.
           </p>
         </div>
-        <div class="footer-element">
-          <p class="social-media">Social media</p>
+        <div class="footer-element media-footer">
+          <p class="social-media media-footer">Social media</p>
           <ul class="footer-social-networks">
             <li class="footer-social-networks-item list">
               <a
@@ -568,7 +592,7 @@
           </ul>
         </div>
 
-        <div class="footer-element-subscribe">
+        <div class="footer-element-subscribe media-footer">
           <form class="subscribe-form">
             <p class="social-media">Subscribe</p>
             <div class="subscribe-form-elements-container">

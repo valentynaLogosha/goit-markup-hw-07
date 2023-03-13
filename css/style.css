@@ -286,13 +286,6 @@ img {
   margin-bottom: 72px;
 }
 
-/* .team-list {
-  display: blok;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-} */
-
 .team-list-container {
   text-align: center;
   background-color: var(--main-color);
@@ -568,15 +561,6 @@ img {
   }
   .sub-form-field {
     margin-bottom: 16px;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .subscribe-btn:after {
-    content: "";
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 2L0 13.25L7.66994 15.6172L19.5 6.375L10.5017 16.4913L10.509 16.4936L10.5 16.4913V22L14.8013 17.8183L20.2501 19.5L24 2Z' fill='white'/%3E%3C/svg%3E");
   }
 }
 
@@ -1309,7 +1293,7 @@ img {
     row-gap: 6px;
   }
 }
-@media screen and (max-width: 1157px) {
+@media screen and (max-width: 1200px) {
   .skils-icon {
     display: none;
   }
@@ -1488,5 +1472,14 @@ img {
   .sub-btn-field {
     display: flex;
     align-items: center;
+  }
+}
+@media screen and (min-width: 320px) {
+  .subscribe-btn:after {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 2L0 13.25L7.66994 15.6172L19.5 6.375L10.5017 16.4913L10.509 16.4936L10.5 16.4913V22L14.8013 17.8183L20.2501 19.5L24 2Z' fill='white'/%3E%3C/svg%3E");
   }
 }

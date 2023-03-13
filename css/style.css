@@ -87,7 +87,9 @@ img {
   text-transform: uppercase;
   color: var(--main-text-color);
   display: flex;
-  margin-right: 76px;
+  padding-top: 24px;
+  padding-bottom: 22px;
+  padding-right: 16px;
 }
 
 .link:hover,
@@ -188,15 +190,13 @@ img {
 
 .features {
   padding-top: 96px;
-  padding-bottom: 0px;
+  padding-bottom: 96px;
 }
 
 .features-list {
-  display: blok;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  gap: 72px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 72px;
 }
 
 .visually-hidden {
@@ -231,7 +231,9 @@ img {
 
 .benefits-card {
   width: 100%;
-  margin-bottom: 72px;
+}
+.benefits-card:last-child {
+  margin-bottom: 0px;
 }
 
 /* Section What are we doing */
@@ -270,7 +272,7 @@ img {
 .team {
   background: var(--section-second-color);
   padding-top: 96px;
-  padding-bottom: 0px;
+  padding-bottom: 96px;
 }
 
 .team-text {
@@ -284,22 +286,20 @@ img {
   margin-bottom: 72px;
 }
 
-.team-list {
+/* .team-list {
   display: blok;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
-}
+} */
 
 .team-list-container {
   text-align: center;
-  background-color: var(--main-background-color);
+  background-color: var(--main-color);
   box-shadow: 0px 1px 6px rgb(46 47 66 / 8%), 0px 1px 1px rgb(46 47 66 / 16%),
     0px 2px 1px rgb(46 47 66 / 8%);
   border-radius: 0px 0px 4px 4px;
   width: 260px;
-  margin: 0 14px 72px;
-  padding-bottom: 32px;
 }
 .team-text-name {
   font-weight: 500;
@@ -309,12 +309,14 @@ img {
   color: var(--main-text-color);
   text-align: center;
   margin-top: 32px;
+  margin-bottom: 8px;
 }
 
 .team-list {
   display: flex;
   flex-direction: column;
   align-items: center;
+  row-gap: 72px;
 }
 
 .social-network-list {
@@ -326,18 +328,13 @@ img {
   align-items: center;
   justify-content: center;
 }
-.team-list-container {
-  background: var(--main-color);
-  border-radius: 0px 0px 4px 4px;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
-/* .team-list-container:nth-child(4n) {
+
+.team-list-container:nth-child(4n) {
   margin-right: 0;
 }
 .team-list-container img {
   margin-bottom: 0px;
-} */
+}
 
 .team-description {
   font-size: 16px;
@@ -359,10 +356,6 @@ img {
   background-color: var(--logo-web-color);
   transition: background-color 250ms var(--transition-func);
 }
-/* .social-network-item {
-  margin: 0px auto 72px;
-  padding-bottom: 32px;
-} */
 
 .social-network-link:hover,
 .social-network-link:focus {
@@ -379,38 +372,24 @@ img {
   padding-bottom: 96px;
 }
 
-.customer-item {
+.clients-link {
   display: flex;
-  margin: 0 auto;
-  justify-content: center;
-  width: 168px;
+  width: 190px;
   height: 88px;
-}
-
-.customer-item a {
-  display: block;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  fill: var(--icon-color);
+  cursor: pointer;
   justify-content: center;
   align-items: center;
-
+}
+.customer-item a {
   color: var(--icon-color);
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   transition: color 250ms var(--transition-func),
     border-color 250ms var(--transition-func);
-  padding: 16px 40px;
 }
-
-.clients-link {
-  border: 1px solid var(--icon-color);
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--icon-color);
-  width: 190px;
-  height: 88px;
-}
-
 .flex-container {
   display: flex;
   flex-direction: row;
@@ -1128,7 +1107,7 @@ footer {
 }
 
 /* Tablet 768*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   .container {
     width: 768px;
     padding: 0 16px;
@@ -1207,6 +1186,9 @@ footer {
     display: flex;
     align-items: center;
   }
+  .header-navigation-logo {
+    margin-right: 76px;
+  }
   .header-navigation a {
     padding: 0;
     padding-top: 24px;
@@ -1215,8 +1197,10 @@ footer {
 }
 /* Tablet 3 SECTION */
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .solutions {
+    padding: 111px 0px 108px 0px;
+    max-height: 436px;
     background-color: var(--main-text-color);
     background-image: linear-gradient(
         to right,
@@ -1228,7 +1212,6 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
-    height: 432px;
     max-width: 100%;
     padding: 112px 0px;
     margin-left: auto;
@@ -1247,11 +1230,7 @@ footer {
     }
   }
 }
-@media (min-width: 768px) {
-  .solutions {
-    padding: 111px 0px 108px 0px;
-    max-height: 436px;
-  }
+@media (min-width: 767px) {
   .solutions-text {
     font-size: 56px;
     line-height: 1.07;
@@ -1277,9 +1256,11 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     row-gap: 64px;
+    column-gap: 24px;
     align-items: center;
     justify-content: center;
   }
+
   /* FOOTER TABLET */
   .footer-logo {
     display: inline-block;
@@ -1311,9 +1292,8 @@ footer {
     display: flex;
   }
   .subscribe-btn {
-    margin: 0 24px;
+    gap: 24px;
   }
-
   .footer-element:nth-child(2) {
     margin-right: auto;
   }
@@ -1330,11 +1310,10 @@ footer {
 }
 
 /* DEKSTOP 1200*/
-@media screen and (min-width: 1158px) {
+@media screen and (min-width: 1200px) {
   .container {
     min-width: 1158px;
     padding: 0 15px;
-    position: relative;
   }
 
   .solutions {
@@ -1373,7 +1352,7 @@ footer {
   }
 }
 
-@media (min-width: 1158px) {
+@media (min-width: 1200px) {
   .header-container {
     display: flex;
     align-items: center;
@@ -1417,6 +1396,7 @@ footer {
     font-size: 20px;
     line-height: 1.2;
     margin-bottom: 8px;
+    margin-top: 8px;
   }
 
   .benefits-card {
@@ -1434,7 +1414,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 8px;
     height: 112px;
     fill: var(--icon-color);
   }
@@ -1450,11 +1429,10 @@ footer {
   }
   .team-list-container {
     width: calc((100%-2.13% * 3) / 4);
-    padding-bottom: 32px;
   }
   .team-text-name {
     margin-bottom: 8px;
-    margin-top: 0;
+    margin-top: 32px;
   }
   .team-list {
     padding: 0 16px;
@@ -1464,9 +1442,6 @@ footer {
     display: flex;
     flex-wrap: nowrap;
     padding: 0;
-  }
-  .team-list-container img {
-    margin-bottom: 32px;
   }
   .customers {
     padding-top: 130px;
